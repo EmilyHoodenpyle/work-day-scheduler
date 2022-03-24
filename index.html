@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link 
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -28,21 +33,38 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      <table class="row">
-        <tbody id="project-display">
-          <tr>
-            <td id="hour" class="hour">9am</td>
-            <td id="past" class="past">oof</td>
-            <td id="saveBtn" class="saveBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-plus text-center">
-                <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-              </svg>
-            </td>
-          </tr>
-        </tbody>
+    <div class="container timeblock" id="container">
+      <!-- Timeblocks go here 
+      Timeblocks should look like div with three divs inside of it. one for the label (9am, 10am, etc) on the left, a textarea in the center for writing down the note for that timeblock, and then a save button on the right-->
+      <div class="row timeblock">
+        <div class="hour" data-time="9">9am</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="10">10am</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="11">11am</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="12">12pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="13">1pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="14">2pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="15">3pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      <div class="row">
+        <div class="hour" data-time="16">4pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      
+      <div class="row">
+        <div class="hour" data-time="17">5pm</div>
+        <textarea name=""></textarea><button class="saveBtn">Save</button></div>
+      </div>
       </div>
     </div>
 

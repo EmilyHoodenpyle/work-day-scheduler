@@ -15,7 +15,7 @@ In order to install this project, you will need to havev already installed Visua
 
 ## Credits
 
-
+Base code created by the University of Washington continuing education program. CSS reset created by Meyerweb (https://meyerweb.com/eric/tools/css/reset/)
 
 ## License
 
