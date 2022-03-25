@@ -1,59 +1,21 @@
 // MOMENT.JS
 var today = moment();
-var hour = moment("9","h").format("h a")
+var hour = moment().format("h")
 
-// important DOM elements
+// CURRENT DAY ELEMENT
 var currentDayEl = today.format("dddd[,] MMMM Do");
 $("#currentDay").text(currentDayEl);
-
-// var divTags = $("div");
-// var containerEl = $('#container');
-// var tableEl = $("<table>");
-// var tableBodyEl = $("<tbody>");
-// var tableRowEl = $("<tr>")
-// var tableTimeEl = $("<td>");
-// var tableEventEl = $("<td>");
-// var saveBtnTileEl = $("<button>");
-// var saveBtnEl = $("<span>")
-
-// //TABLE
-// tableBodyEl.append(tableRowEl);
-// tableEl.append(tableBodyEl);
-// containerEl.append(tableEl);
-
-// //HOUR
-// tableTimeEl.addClass('hour');
-// tableTimeEl.text(hour)
-// tableRowEl.append(tableTimeEl);
 
 //EVENT
 function getCurrent(){
     if (hour < today) {
-      tableEventEl.addClass("past");
+        $(element).addClass("past") || .removeClass("");
     } else if (time > today) {
       tableEventEl.addClass("future");
     } else if (time === today) {
       tableEventEl.addClass("present");
   }
 }
-// tableEventEl.text();
-// tableRowEl.append(tableEventEl);
-
-//SAVE
-// saveBtnEl.on('click', function () {
-//     if (isDark) {
-//       $('body').css({ 'background-color': '#d9e9e8', color: '#1a1a1a' });
-//       isDark = !isDark;
-//     } else {
-//       $('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
-//       isDark = !isDark;
-//     }
-//   });
-
-// saveBtnEl.addClass("saveBtn " + "material-icons-outlined");
-// saveBtnEl.text("e878")
-// saveBtnTileEl.append(saveBtnEl);
-// tableRowEl.append(saveBtnTileEl);
 
 $(".saveBtn").on("click",saveUserInput)
 
