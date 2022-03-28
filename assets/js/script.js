@@ -2,31 +2,41 @@
 var today = moment();
 var hour = moment().format("h")
 
+console.log(hour)
+
 // CURRENT DAY ELEMENT
 var currentDayEl = today.format("dddd[,] MMMM Do");
 $("#currentDay").text(currentDayEl);
 
 //EVENT
+var currentTime = $(".hour")
+console.log(currentTime.value);
 function getCurrent(){
-    if (hour < today) {
-        $(element).addClass("past") || .removeClass("");
-    } else if (time > today) {
-      tableEventEl.addClass("future");
-    } else if (time === today) {
-      tableEventEl.addClass("present");
+    if (currentTime.value < hour) {
+      $("textarea").addClass("past");
+    } else if (currentTime.value > hour) {
+      $("textarea").addClass("future");
+    } else if (currentTime.value === hour) {
+      $("textarea").addClass("present");
   }
 }
+
+console.log(currentTime)
 
 $(".saveBtn").on("click",saveUserInput)
 
 function saveUserInput(event) {
     var saveBtnEl = event.target;
     var userInput = saveBtnEl.previousElementSibling.value;
-    var rowTime = $(this).parent().attr("time") //access the event.target's parent using JS
-    console.log(userInput, rowTime)
+    var rowTime = $(this).data("time"); //access the event.target's parent using JS
+    
+    console.log(userInput, rowTime);
     //put your saving to local storage here
     //you're going to need:
-    localStorage.setItem(rowTime,userInput)
+    localStorage.getItem(userInput);
+
+    textarea.textContent = 
+
 }
 
 //you're also going to need a for loop to read through every item in localStorage and retrieve the value and store it in the userInput field
